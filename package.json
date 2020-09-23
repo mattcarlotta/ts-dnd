@@ -1,0 +1,47 @@
+{
+  "name": "ts-dnd",
+  "description": "A fullstack MERN SSR boilerplate.",
+  "repository": "https://github.com/mattcarlotta/ts-dnd",
+  "author": "Matt Carlotta",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "NODE_ENV=development PORT=3000 webpack-dev-server",
+    "build": "rimraf dist && NODE_ENV=production webpack",
+    "start": "node ./server.js"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "css-loader": "^4.3.0",
+    "error-overlay-webpack-plugin": "^0.4.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-watch": "^7.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.11.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.2.2",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpackbar": "^4.0.0"
+  },
+  "dependencies": {
+    "address": "^1.1.2",
+    "chalk": "^4.1.0",
+    "express": "^4.17.1"
+  }
+}
