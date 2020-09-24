@@ -15,12 +15,25 @@
   </head>
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
-    <div id="active-tasks">
-      <h1 id="active-title">Active Tasks</h1>
-    </div>
-    <div id="completed-tasks">
-      <h1 id="completed-title">Completed Tasks</h1>
-      <ul></ul>
+    <template id="single-task">
+      <li class="task-item" draggable="true">
+        <div class="task-container">
+          <h2 class="task-title"></h2>
+          <p class="task-desc"></p>
+        </div>
+      </li>
+    </template>
+    <template id="task-list">
+      <section class="tasks-container">
+        <header class="header">
+          <h2 class="header-title"></h2>
+        </header>
+        <ul class="task-list"></ul>
+      </section>
+    </template>
+    <div id="root">
+      <h1 style="text-align: center">TS Drag and Drop Example</h1>
+      <div id="container"></div>
     </div>
   </body>
 </html>

@@ -7,6 +7,13 @@ const { currentDirectory } = require("./envs");
 
 const resolvePath = path => resolve(currentDirectory, path);
 
+const alias = {
+  "~components": resolvePath("src/components/"),
+  "~styles": resolvePath("src/styles/"),
+  "~types": resolvePath("src/types/"),
+  "~utils": resolvePath("src/utils/")
+};
+
 module.exports = {
   /* project publicPath */
   publicPath: "/",
@@ -20,6 +27,6 @@ module.exports = {
   templatePath: resolvePath("public/index.html"),
   /* path to favicon.ico (build/favicon.ico) */
   faviconPath: resolvePath("public/favicon.ico"),
-  /* paths to resolve */
-  resolvePath
+  /* alias paths to resolve */
+  alias
 };

@@ -5,3 +5,70 @@ html {
 body {
   margin: 0;
 }
+
+#container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.droppable {
+  background: #dcf7f2;
+}
+
+.task-item.is-dragging {
+  background: #a6d9f6;
+  color: darkblue;
+}
+
+.tasks-container {
+  margin-top: 1rem;
+  border: 1px solid darkblue;
+  min-height: 200px;
+  width: 375px;
+  overflow: hidden;
+}
+
+.task-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  height: 100%;
+}
+
+.task-item {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
+  margin: 1rem;
+  background: white;
+
+  :hover {
+    cursor: grab;
+  }
+}
+
+.task-container {
+  padding: 1rem;
+}
+
+.task-item {
+  font-size: 16px;
+}
+
+.task-title {
+  margin: 0;
+}
+
+.task-desc {
+  font-style: italic;
+  font-size: 12px;
+}
+
+.header {
+  background: #4287f5;
+  color: white;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -33,6 +33,7 @@
     "terser-webpack-plugin": "^4.2.2",
     "ts-loader": "^8.0.4",
     "typescript": "^4.0.3",
+    "uuid": "^8.3.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
@@ -40,6 +41,7 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "@types/uuid": "^8.3.0",
     "address": "^1.1.2",
     "chalk": "^4.1.0",
     "express": "^4.17.1"
