@@ -12,8 +12,7 @@ class State {
   }
 
   addProject(title: string, description: string, list: TaskStatus): void {
-    const newProject = new Task(uuidv4(), title, description, list);
-    this.tasks.push(newProject);
+    this.tasks.push(new Task(uuidv4(), title, description, list));
     this.updateListeners();
   }
 

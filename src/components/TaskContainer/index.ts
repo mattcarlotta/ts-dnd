@@ -7,20 +7,19 @@ import { Droppable, TaskItems } from "~types";
 export class TaskContainer
   extends BaseComponent<HTMLDivElement, HTMLElement>
   implements Droppable {
-  assignedProjects: TaskItems;
+  assignedTasks: TaskItems = [];
 
   constructor(private type: "active" | "completed") {
     super("task-list", "container", false, `${type}-tasks`);
-    this.assignedProjects = [];
 
     this.dragLeave = this.dragLeave.bind(this);
     this.dragOver = this.dragOver.bind(this);
     this.onDrop = this.onDrop.bind(this);
-    this.configure();
+    this.init();
     this.renderContent();
   }
 
-  configure(): void {
+  init(): void {
     this.element.addEventListener("dragover", this.dragOver);
     this.element.addEventListener("dragleave", this.dragLeave);
     this.element.addEventListener("drop", this.onDrop);
@@ -31,8 +30,8 @@ export class TaskContainer
           ? project.status === "active"
           : project.status === "completed"
       );
-      this.assignedProjects = filteredProjects;
-      this.renderProjects();
+      this.assignedTasks = filteredProjects;
+      this.renderTasks();
     });
   }
 
@@ -70,14 +69,14 @@ export class TaskContainer
     if (titleEl) titleEl.textContent = this.type.toUpperCase().concat(" TASKS");
   }
 
-  private renderProjects() {
+  private renderTasks() {
     const listEl = <HTMLUListElement>(
       document.getElementById(`${this.type}-tasks-list`)
     );
     listEl.innerHTML = "";
-    for (const project of this.assignedProjects) {
+    for (const task of this.assignedTasks) {
       const containerEl = this.element.querySelector("ul");
-      if (containerEl) new TaskItem(containerEl.id, project);
+      if (containerEl) new TaskItem(containerEl.id, task);
     }
   }
 }

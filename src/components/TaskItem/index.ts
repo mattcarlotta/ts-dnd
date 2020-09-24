@@ -13,11 +13,11 @@ export class TaskItem
 
     this.dragStart = this.dragStart.bind(this);
     this.dragEnd = this.dragEnd.bind(this);
-    this.configure();
+    this.init();
     this.renderContent();
   }
 
-  configure(): void {
+  init(): void {
     this.element.addEventListener("dragstart", this.dragStart);
     this.element.addEventListener("dragend", this.dragEnd);
   }

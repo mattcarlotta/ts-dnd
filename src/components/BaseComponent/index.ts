@@ -24,10 +24,10 @@ export abstract class BaseComponent<
     this.element = <U>importedNode.firstElementChild;
     if (newElementId) this.element.id = newElementId;
 
-    this.attach(insertAtStart);
+    this.attachElement(insertAtStart);
   }
 
-  private attach(insertAtStart: boolean) {
+  private attachElement(insertAtStart: boolean) {
     this.hostEl.insertAdjacentElement(
       insertAtStart ? "afterbegin" : "beforeend",
       this.element
