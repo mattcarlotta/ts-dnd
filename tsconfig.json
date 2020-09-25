@@ -64,6 +64,7 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     "paths": {
       "~components/*": ["src/components/*"],
+      "~store": ["src/store/index"],
       "~styles/*": ["src/styles/*"],
       "~types": ["src/types/index"],
       "~utils/*": ["src/utils/*"]

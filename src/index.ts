@@ -1,5 +1,5 @@
 import { TaskContainer } from "~components/TaskContainer";
-import { state } from "~components/State";
+import { state } from "~store";
 import "~styles/app.scss";
 
 new TaskContainer("active");

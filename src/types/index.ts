@@ -8,11 +8,11 @@ export type TaskStatus = "active" | "completed";
 
 export interface Draggable {
   dragStart(event: DragEvent): void;
-  // dragEnd(event: DragEvent): void;
+  dragEnd(event: DragEvent): void;
 }
 
 export interface Droppable {
   dragOver(event: DragEvent): void;
   onDrop(event: DragEvent): void;
-  dragLeave(event: DragEvent): void;
+  dragLeave(): void;
 }

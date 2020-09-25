@@ -1,6 +1,6 @@
 import { BaseComponent } from "~components/BaseComponent";
-import { state } from "~components/State";
 import { TaskItem } from "~components/TaskItem";
+import { state } from "~store";
 import { Droppable, TaskItems } from "~types";
 
 // Task Container
